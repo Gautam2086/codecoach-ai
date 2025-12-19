@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeCoach Thumbnail</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 1280px;
+      height: 720px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Subtle grid pattern */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    /* Glow effect */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .container {
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .icon {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border-radius: 24px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
+    }
+    
+    .icon svg {
+      width: 50px;
+      height: 50px;
+      color: white;
+    }
+    
+    h1 {
+      font-size: 90px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 span {
+      color: #10b981;
+    }
+    
+    .subtitle {
+      font-size: 32px;
+      color: #94a3b8;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    
+    .features {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+    
+    .feature {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 24px;
+      border-radius: 50px;
+      color: #cbd5e1;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .feature span {
+      color: #10b981;
+    }
+    
+    .badge {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    }
+    
+    /* Voice wave animation bars */
+    .voice-waves {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    
+    .wave-bar {
+      width: 8px;
+      background: linear-gradient(to top, #10b981, #34d399);
+      border-radius: 4px;
+    }
+    
+    .wave-bar:nth-child(1) { height: 30px; }
+    .wave-bar:nth-child(2) { height: 50px; }
+    .wave-bar:nth-child(3) { height: 70px; }
+    .wave-bar:nth-child(4) { height: 45px; }
+    .wave-bar:nth-child(5) { height: 60px; }
+    .wave-bar:nth-child(6) { height: 35px; }
+    .wave-bar:nth-child(7) { height: 55px; }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  
+  <div class="badge">Demo</div>
+  
+  <div class="container">
+    <div class="icon">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    </div>
+    
+    <h1>Code<span>Coach</span></h1>
+    
+    <p class="subtitle">Voice Interview Prep Agent</p>
+    
+    <div class="features">
+      <div class="feature"><span>🎙️</span> LiveKit + Deepgram</div>
+      <div class="feature"><span>🧠</span> RAG + GPT-4o</div>
+      <div class="feature"><span>📝</span> Live Transcript</div>
+    </div>
+    
+    <div class="voice-waves">
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+    </div>
+  </div>
+</body>
+</html>
+
